@@ -1,38 +1,395 @@
-.App {
+html{
+  scroll-behavior: smooth;
+}
+.nav-bar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background:linear-gradient(#00000044);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; }
+
+.navigation {
+  display: flex;
+  gap: 40px;
+}
+
+.ancor {
+  text-decoration: none;
+  color: rgba(255, 223, 112, 1);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.ancor:hover {
+  color: white;
+  text-shadow: 0 0 10px #facc15c7;
+  border-radius: 100%;
+  border: 20x solid rgba(255, 223, 112, 1);
+  box-shadow: rgba(255, 223, 112, 1);
+}
+
+.image-container{
+ 
+   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom,rgba(44, 79, 135, 0.9), #0d0d0d);
+  color: white;
+  padding: 60px 20px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: radial-gradient(circle at center, url("./ABD\ \(1\).png"), transparent 70%);
+  border-radius: 50px ;
+  border: #000 4px;
+
+}
+
+.my-profile {
+  width: 30vh;                         
+  height: 40vh;
+  background: rgba(255, 223, 112, 1) ;               
+  border: none;
+  border-radius: 50%;                   
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  zoom: 200%;
+
+}
+
+.my-profile:hover {
+  transform: scale(1.05);  
+  box-shadow: 0px 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.profile-detail {
+  max-width: 600px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.intro{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.my-name {
+  color: rgba(255, 223, 112, 1);
+}
+.my-occup {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.my-summery {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.education-section{
+  min-height: 100vh;
+  background: linear-gradient(to bottom ,#0d0d0d, rgba(44, 79, 135, 0.9));
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.edu-title {
+  font-size: 2.5rem;
+  color: rgb(255, 254, 252);
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(248, 221, 122, 0.7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.edu-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+
+.edu-card {
+  border: 2px solid rgba(255, 223, 112, 0.3);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  border-color: rgba(255, 223, 112, 1);
+  box-shadow: 0 0 25px rgba(255, 223, 112, 0.4);
+  transform: translateY(-5px);
+}
+
+.edu-degree {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgba(255, 223, 112, 1) ;
+  margin-bottom: 8px;
+}
+
+.edu-institution {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.edu-year {
+  font-size: 1.0rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.edu-description {
+  color: whitesmoke;
+  line-height: 1.5;
+}
+
+
+@media (min-width: 770px) {
+  .edu-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+
+  .edu-card {
+    width: 45%;
+  }
+} 
+.skills-section {
+  min-height: 100vh;
+  background: linear-gradient(to bottom,rgba(44, 79, 135, 0.9), #0d0d0d);
+  color: white;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(255, 223, 112, 0.7);
+  animation: glowText 2s infinite alternate;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 223, 112, 0.3);
+  border-radius: 20px;
+  padding: 20px 25px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 223, 112, 0.1);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 223, 112, 1);
+  box-shadow: 0 0 40px rgba(255, 223, 112, 0.6);
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skills {
+  color: #ffdf70;
+  font-size: 1.2rem;
+}
+
+.percentage {
+  color: #ccc;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  animation: fill 2s ease-out forwards;
+  box-shadow: 0 0 15px rgba(255, 223, 112, 0.6);
+}
+
+.html {
+  width: 95%;
+  background: linear-gradient(30deg ,rgba(44, 79, 135, 0.9),  #f9e377);
+}
+
+.css {
+  width: 90%;
+  background: linear-gradient(30deg ,rgba(44, 79, 135, 0.9),  #f9e377);
+}
+
+.js {
+  width: 70%;
+  background: linear-gradient(30deg ,rgba(44, 79, 135, 0.9),  #f9e377);
+}
+
+.react {
+  width: 80%;
+  background: linear-gradient(30deg ,rgba(44, 79, 135, 0.9),  #f9e377);
+}
+
+.python {
+  width: 75%;
+  background: linear-gradient(30deg ,rgba(44, 79, 135, 0.9),  #f9e377);
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 0 10px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
+.contact-section {
   min-height: 100vh;
+  background: linear-gradient(to bottom ,#0d0d0d, rgba(44, 79, 135, 0.9));
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 223, 112, 0.8);
+  animation: fadeDown 1s ease-in-out;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 223, 112, 0.3);
+  padding: 30px 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(255, 223, 112, 0.1);
+  animation: fadeUp 1.2s ease;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  color: #ffdf70;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 223, 112, 0.5);
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ffdf70;
+  box-shadow: 0 0 10px rgba(255, 223, 112, 0.4);
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #ffdf70;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffe791;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 223, 112, 0.6);
+}
+
+.contact-info {
+  margin-top: 40px;
+  text-align: center;
+  color: #ccc;
+}
+
+.contact-info .email {
+  color: #ffdf70;
+  font-weight: 600;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 25px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+.social-links {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.social-links a {
+  font-size: 1.8rem;
+  color: #facc15;
+  transition: 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-links a:hover {
+  color: #fde047;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
 }
